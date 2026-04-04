@@ -1,0 +1,1110 @@
+/* ===================================================== */
+/* 🟦 GLOBAL / BODY START — COPY */
+/* ===================================================== */
+
+body{
+font-family:"Comic Sans MS",Arial;
+background:#e9f6ff;
+text-align:center;
+margin:0;
+padding:0;
+overflow-x:hidden;
+}
+
+/* ===================================================== */
+/* 🟦 GLOBAL / BODY END */
+/* ===================================================== */
+
+
+
+/* ===================================================== */
+/* 🟩 HEADER START — COPY */
+/* ===================================================== */
+
+header{
+background:white;
+padding:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+h1{
+font-size:2em;
+margin:5px 0;
+}
+
+.button-row{
+margin-top:5px;
+}
+
+.button-row button{
+background:#3ecf5b;
+color:white;
+border:none;
+border-radius:15px;
+padding:12px 22px;
+font-weight:bold;
+font-size:1.2em;
+margin:5px;
+cursor:pointer;
+box-shadow:0 5px #2fa04a;
+transition:0.2s;
+}
+
+.button-row button:hover{
+transform:scale(1.08);
+}
+
+/* ===================================================== */
+/* 🟩 HEADER END */
+/* ===================================================== */
+
+
+
+/* ===================================================== */
+/* 🟦 MAIN LAYOUT START — COPY */
+/* ===================================================== */
+
+#game-container{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:20px;
+margin:10px;
+}
+
+/* ===================================================== */
+/* 🟦 MAIN LAYOUT END */
+/* ===================================================== */
+
+
+
+/* ===================================================== */
+/* ⭐ PHONICS ENGINE START — COPY */
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* ⭐ PHONICS PANEL (LEFT SIDE) */
+/* ===================================================== */
+
+#left-panel{
+width:40%;
+text-align:center;
+}
+
+
+/* ===================================================== */
+/* 🖼 PHONICS IMAGE */
+/* ===================================================== */
+
+#image{
+width:78%;
+max-width:360px;
+border-radius:15px;
+margin-top:0px;
+margin-bottom:5px;
+transition:transform 0.3s ease;
+}
+
+
+/* ===================================================== */
+/* 🔤 LETTER BOX BASE STYLE */
+/* ===================================================== */
+
+.letter-btn{
+aspect-ratio:1/1;
+width:120px;
+
+font-size:4rem;
+font-weight:bold;
+
+background:linear-gradient(145deg,#0a84ff,#0066cc);
+color:white;
+
+border-radius:25px;
+border:4px solid white;
+
+cursor:pointer;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:
+6px 6px 12px rgba(0,0,0,0.25),
+-4px -4px 10px rgba(255,255,255,0.6),
+inset -4px -4px 8px rgba(0,0,0,0.25),
+inset 4px 4px 8px rgba(255,255,255,0.7);
+
+transition:all 0.2s ease;
+}
+
+
+/* ===================================================== */
+/* ✨ LETTER STATE — ACTIVE (BLUE BOUNCE) */
+/* ===================================================== */
+
+.letter-btn.active{
+animation:bounceVibrateGroup 0.8s infinite;
+}
+
+@keyframes bounceVibrateGroup{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+
+/* ===================================================== */
+/* ✨ LETTER STATE — SELECTED (ORANGE) */
+/* ===================================================== */
+
+.letter-btn.selected{
+background:linear-gradient(145deg,#ffb347,#ff7f24);
+animation:none;
+}
+
+
+/* ===================================================== */
+/* 🟡 LETTER STATE — BLENDED RESULT */
+/* ===================================================== */
+
+.letter-btn.blended{
+
+background:linear-gradient(145deg,#ffe066,#ffcc00);
+color:black;
+
+/* remove square */
+aspect-ratio:auto;
+
+/* longer box */
+min-width:140px;
+padding:0 20px;
+height:130px;
+
+/* shake effect */
+animation:shake 0.35s cubic-bezier(.36,.07,.19,.97);
+}
+
+
+/* ===================================================== */
+/* ✨ SHAKE ANIMATION */
+/* ===================================================== */
+
+@keyframes shake{
+0%{transform:translateX(0);}
+20%{transform:translateX(-4px);}
+40%{transform:translateX(4px);}
+60%{transform:translateX(-3px);}
+80%{transform:translateX(3px);}
+100%{transform:translateX(0);}
+}
+
+
+/* ===================================================== */
+/* 🔤 PHONICS ROW STRUCTURE */
+/* ===================================================== */
+
+.phonics-block{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin:10px 0;
+}
+
+/* spacing between row1 and row2 */
+#row2{
+margin-top:25px;
+}
+
+.letter-row{
+display:flex;
+justify-content:center;
+gap:80px;
+margin:10px 0;
+}
+
+
+/* ===================================================== */
+/* 🚗 SLIDER BAR */
+/* ===================================================== */
+
+.slider-bar{
+width:320px;
+height:8px;
+background:#222;
+border-radius:6px;
+margin-top:20px;
+position:relative;
+}
+
+
+/* ===================================================== */
+/* ➡️ SLIDER ARROW HEAD */
+/* ===================================================== */
+
+.slider-bar::after{
+content:"";
+position:absolute;
+right:-18px;
+top:50%;
+transform:translateY(-50%);
+
+border-left:28px solid black;
+border-top:12px solid transparent;
+border-bottom:12px solid transparent;
+}
+
+
+/* ===================================================== */
+/* 👉 SLIDER HANDLE (HAND EMOJI) */
+/* ===================================================== */
+
+.car-handle{
+position:absolute;
+left:0;
+top:-30px;
+font-size:48px;
+cursor:pointer;
+}
+
+
+/* ===================================================== */
+/* ⭐ PHONICS ENGINE END */
+/* ===================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================== */
+/* 🎮 GAME ENGINE START — FINAL CLEAN (CAVE HUNT) */
+/* ===================================================== */
+
+/* ===================== */
+/* 🎮 RIGHT PANEL */
+/* ===================== */
+
+#right-panel{
+width:60%;
+text-align:center;
+}
+
+/* ===================== */
+/* 🎮 GAME AREA */
+/* ===================== */
+
+#game-area{
+width:100%;
+max-width:1000px;
+margin:0 auto;
+position:relative;
+}
+
+/* ===================== */
+/* 🧮 SCOREBOARD */
+/* ===================== */
+
+.scoreboard{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-bottom:20px;
+}
+
+.team{
+font-size:28px;
+background:white;
+padding:15px 25px;
+border-radius:16px;
+border:6px solid transparent;
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.team-emoji{
+font-size:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* ACTIVE TEAM */
+.dog.active{
+border-color:#ff3b3b;
+box-shadow:0 0 20px #ff3b3b;
+animation:teamPulse 1.2s infinite;
+}
+
+.tiger.active{
+border-color:#2f80ff;
+box-shadow:0 0 20px #2f80ff;
+animation:teamPulse 1.2s infinite;
+}
+
+@keyframes teamPulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.06);}
+100%{transform:scale(1);}
+}
+
+/* ===================== */
+/* 🧮 SCORE SYSTEM */
+/* ===================== */
+
+.goal{
+display:flex;
+gap:12px;
+margin-left:10px;
+align-items:center;
+}
+
+.apple{
+font-size:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.3s;
+}
+
+.apple.muted{
+filter:grayscale(100%);
+opacity:0.35;
+}
+
+.apple-highlight{
+animation:appleBounce 0.9s ease;
+outline:6px solid white;
+border-radius:50%;
+}
+
+@keyframes appleBounce{
+0%{transform:scale(0.6);}
+20%{transform:scale(1.4);}
+40%{transform:scale(0.9);}
+60%{transform:scale(1.25);}
+80%{transform:scale(0.95);}
+100%{transform:scale(1);}
+}
+
+/* ===================== */
+/* 🌲 GRID */
+/* ===================== */
+
+#forestGrid{
+display:grid;
+grid-template-columns: repeat(7, 1fr);
+gap:0;
+width:100%;
+max-width:1000px;
+margin:20px auto;
+}
+
+/* ===================================================== */
+/* ❄️ TILE — ICY CAVE BASE */
+/* ===================================================== */
+
+.tile{
+  position:relative;
+  aspect-ratio:1 / 1;
+  border-radius:12px;
+  overflow:visible;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:clamp(40px, 5vw, 90px);
+  cursor:pointer;
+  transition:0.2s;
+
+  /* ❄️ ICE TEXTURE STACK */
+  background:
+    linear-gradient(145deg,#bfe9ff,#8fd3ff),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255,255,255,0.15) 0px,
+      rgba(255,255,255,0.15) 2px,
+      transparent 2px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255,255,255,0.4),
+      transparent 60%
+    );
+
+  border:2px solid rgba(255,255,255,0.7);
+
+  /* ❄️ GLASS / ICE DEPTH */
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,0.6),
+    0 4px 12px rgba(0,120,200,0.3);
+}
+
+
+/* ===================================================== */
+/* ⚡ TILE — ELECTRIC PULSE (UNDER SHINE) */
+/* ===================================================== */
+
+.tile::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 40%,
+      rgba(0,180,255,0.8),
+      transparent 60%
+    );
+
+  opacity:0.6;
+  mix-blend-mode:screen;
+
+  transform:translateX(-100%);
+  animation:electricPulse 2.5s linear infinite;
+
+  pointer-events:none;
+  z-index:1;
+}
+
+@keyframes electricPulse{
+  0%{
+    transform:translateX(-100%);
+    opacity:0;
+  }
+  20%{
+    opacity:1;
+  }
+  50%{
+    opacity:0.8;
+  }
+  100%{
+    transform:translateX(100%);
+    opacity:0;
+  }
+}
+
+/* ===================================================== */
+/* ❄️ TILE — ICE SHINE (TOP LAYER) */
+/* ===================================================== */
+
+.tile::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 30%,
+      rgba(255,255,255,0.4),
+      transparent 70%
+    );
+
+  opacity:0.25;
+  pointer-events:none;
+
+  z-index:2;
+}
+
+
+/* ===================== */
+/* 🎯 SELECTED */
+/* ===================== */
+
+.tile.selected.dog{
+border-color:#ff3b3b;
+box-shadow:0 0 18px #ff3b3b;
+}
+
+.tile.selected.tiger{
+border-color:#2f80ff;
+box-shadow:0 0 18px #2f80ff;
+}
+
+.tile.selected{
+animation:tileBounce 0.6s infinite;
+}
+
+@keyframes tileBounce{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+/* ===================== */
+/* 🎴 REVEALED */
+/* ===================== */
+
+.tile.revealed{
+  background:
+    linear-gradient(145deg,#e6f7ff,#cceeff);
+
+  font-size:65px;
+  opacity:0.4;
+  pointer-events:none;
+  filter:grayscale(60%);
+}
+
+
+/* ===================== */
+/* 💎 DIAMOND GLOW */
+/* ===================== */
+
+.tile.revealed:has(:not(.deco)){
+box-shadow:0 0 18px gold;
+}
+
+/* ===================== */
+/* 💥 EXPLOSION EFFECT */
+/* ===================== */
+
+.tile.explode{
+animation:explodePop 0.35s ease;
+background:#ff6b3d !important;
+}
+
+@keyframes explodePop{
+0%{transform:scale(1);}
+50%{transform:scale(1.3);}
+100%{transform:scale(1);}
+}
+
+/* ===================== */
+/* 🔥 FIRE PRE-PULSE */
+/* ===================== */
+
+.tile.fire{
+animation:firePulse 1s infinite;
+}
+
+@keyframes firePulse{
+0%{box-shadow:0 0 0px orange;}
+50%{box-shadow:0 0 20px orange;}
+100%{box-shadow:0 0 0px orange;}
+}
+
+
+/* ========================================== */
+/* ⚡ CHAOS TILE HIGHLIGHT (FIRE MODE) */
+/* ========================================== */
+
+.tile.chaos-highlight{
+  animation:chaosPulse 0.5s infinite;
+
+  box-shadow:
+    0 0 25px #00cfff,
+    0 0 60px #00e5ff,
+    0 0 90px rgba(0,200,255,0.8);
+
+  border-color:#00e5ff;
+}
+
+@keyframes chaosPulse{
+  0%{
+    transform:scale(1);
+    filter:brightness(1);
+  }
+  50%{
+    transform:scale(1.18);
+    filter:brightness(1.6);
+  }
+  100%{
+    transform:scale(1);
+    filter:brightness(1);
+  }
+}
+
+.tile.chaos-final{
+  animation:chaosImpact 0.4s ease;
+}
+
+@keyframes chaosImpact{
+  0%{transform:scale(1);}
+  30%{transform:scale(1.4) rotate(8deg);}
+  60%{transform:scale(0.9) rotate(-5deg);}
+  100%{transform:scale(1);}
+}
+/* ===================================================== */
+/* ✨ SAFE TILE HIGHLIGHT (GIFT MODE) */
+/* ===================================================== */
+
+.tile.safe-highlight{
+  animation:safePulse 0.9s infinite;
+  box-shadow:0 0 20px gold, 0 0 45px yellow;
+  z-index:2;
+}
+
+@keyframes safePulse{
+  0%{
+    transform:scale(1);
+    box-shadow:0 0 10px gold;
+  }
+  50%{
+    transform:scale(1.12);
+    box-shadow:0 0 30px gold, 0 0 60px yellow;
+  }
+  100%{
+    transform:scale(1);
+    box-shadow:0 0 10px gold;
+  }
+}
+
+/* ===================== */
+/* ⛏️ DIG HIT EFFECT */
+/* ===================== */
+
+.tile.dig-hit{
+  animation:digShake 0.15s;
+}
+
+@keyframes digShake{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+  100%{transform:translateY(0);}
+}
+
+/* ===================== */
+/* 🪨 CRACK STAGES */
+/* ===================== */
+
+.tile.crack1{
+  box-shadow: inset 0 0 0 4px rgba(0,0,0,0.2);
+}
+
+.tile.crack2{
+  box-shadow:
+    inset 0 0 0 7px rgba(0,0,0,0.45),
+    inset 0 0 18px rgba(0,0,0,0.4);
+}
+
+/* ===================== */
+/* 💥 BREAK OPEN */
+/* ===================== */
+
+.tile.break-open{
+  animation:breakOpen 0.35s ease;
+}
+
+@keyframes breakOpen{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.2) rotate(3deg);}
+  100%{transform:scale(1);}
+}
+
+
+/* ===================== */
+/* 🌿 DECO */
+/* ===================== */
+
+.deco{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:100%;
+will-change: transform;
+z-index:3;
+}
+
+/* 🌿 FLOAT */
+.deco.float{
+  animation:float 3.5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%   { transform:translateY(0px) scale(1); }
+  50%  { transform:translateY(calc(var(--floatY, 8px) * -1)) scale(1.05); }
+  100% { transform:translateY(0px) scale(1); }
+}
+
+/* ========================================== */
+/* 🔘 PICK BUTTON — FINAL EXAGGERATED VERSION */
+/* ========================================== */
+
+.openBtn{
+  position:absolute;
+  bottom:10px;
+
+  background:linear-gradient(180deg,#ffe066,#ffcc00);
+  color:black;
+
+  border:none;
+  border-radius:18px;
+
+  padding:10px 16px;
+  font-size:36px;
+  font-weight:bold;
+
+  cursor:pointer;
+  z-index: 4; 
+  transform-origin:center bottom;
+
+  box-shadow:
+    0 6px #cc9900,
+    0 0 12px rgba(255,220,0,0.9);
+
+  animation:
+    bouncyIdle 1s infinite,
+    buttonGlow 1.2s infinite alternate;
+}
+
+/* ========================================== */
+/* Z-INDEX SUMMARY */
+/* ========================================== */
+
+.deco{ z-index:3; position:relative; }
+
+.openBtn{ z-index:4; position:absolute; }
+
+.tile::before{ z-index:1; }
+.tile::after{ z-index:2; }
+
+
+/* ========================================== */
+/* 🎯 SUPER BOUNCY IDLE (JUICY) */
+/* ========================================== */
+
+@keyframes bouncyIdle{
+  0%{transform:translateY(0) scale(1);}
+  30%{transform:translateY(-10px) scale(1.08);}
+  50%{transform:translateY(2px) scale(0.95);}
+  70%{transform:translateY(-6px) scale(1.04);}
+  100%{transform:translateY(0) scale(1);}
+}
+
+/* ========================================== */
+/* ✨ STRONGER YELLOW GLOW */
+/* ========================================== */
+
+@keyframes buttonGlow{
+  0%{
+    box-shadow:
+      0 6px #cc9900,
+      0 0 10px rgba(255,220,0,0.7);
+  }
+  100%{
+    box-shadow:
+      0 6px #cc9900,
+      0 0 28px rgba(255,235,0,1);
+  }
+}
+
+/* ========================================== */
+/* ⛏️ EXAGGERATED PICK SWING */
+/* ========================================== */
+
+.openBtn:active{
+  animation:pickSwing 0.35s cubic-bezier(.2,.8,.3,1.4);
+}
+
+@keyframes pickSwing{
+  0%{
+    transform:rotate(0deg) scale(1);
+  }
+  30%{
+    transform:rotate(-55deg) scale(0.85);
+  }
+  60%{
+    transform:rotate(25deg) scale(1.1);
+  }
+  80%{
+    transform:rotate(-10deg) scale(0.95);
+  }
+  100%{
+    transform:rotate(0deg) scale(1);
+  }
+}
+
+/* ========================================== */
+/* ⛏️ DIG HIT (STRONG IMPACT) */
+/* ========================================== */
+
+.tile.dig-hit{
+  animation:digShake 0.22s;
+}
+
+@keyframes digShake{
+  0%{transform:translateY(0) scale(1);}
+  25%{transform:translateY(-14px) scale(1.08);}
+  50%{transform:translateY(6px) scale(0.92);}
+  75%{transform:translateY(-6px) scale(1.02);}
+  100%{transform:translateY(0) scale(1);}
+}
+
+
+/* ========================================== */
+/* 🪨 CRACK STAGES — CLEAN SHARP VERSION */
+/* ========================================== */
+
+.tile.crack1{
+  background-image:
+    linear-gradient(120deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
+    linear-gradient(30deg, transparent 49%, rgba(255,255,255,0.8) 50%, transparent 51%);
+  animation: crackFade 0.15s ease;
+}
+
+.tile.crack2{
+  background-image:
+    radial-gradient(circle at 52% 48%, rgba(255,255,255,0.25), transparent 60%),
+
+    /* 5 clean cracks */
+    linear-gradient(120deg, transparent 47%, rgba(255,255,255,1) 50%, transparent 53%),
+    linear-gradient(30deg, transparent 48%, rgba(255,255,255,0.9) 50%, transparent 52%),
+    linear-gradient(75deg, transparent 47%, rgba(255,255,255,0.85) 50%, transparent 53%),
+    linear-gradient(165deg, transparent 48%, rgba(255,255,255,0.8) 50%, transparent 52%),
+    linear-gradient(95deg, transparent 47%, rgba(255,255,255,0.9) 50%, transparent 53%);
+
+  animation: crackFade 0.15s ease;
+}
+
+@keyframes crackFade{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+/* ========================================== */
+/* 💥 BREAK OPEN (HEAVIER IMPACT) */
+/* ========================================== */
+
+.tile.break-open{
+  animation:breakOpen 0.45s cubic-bezier(.2,.8,.3,1.3);
+}
+
+@keyframes breakOpen{
+  0%{transform:scale(1);}
+  25%{transform:scale(1.4) rotate(8deg);}
+  50%{transform:scale(0.85) rotate(-6deg);}
+  75%{transform:scale(1.15) rotate(3deg);}
+  100%{transform:scale(1);}
+}
+
+
+
+
+
+
+/* ========================================== */
+/* 🎁 SAFE TILE HIGHLIGHT (GIFT MODE) */
+/* ========================================== */
+
+/* ========================================== */
+/* 🎁 SAFE TILE HIGHLIGHT — POWER VERSION */
+/* ========================================== */
+
+.safe-highlight{
+  animation:safePulse 0.7s cubic-bezier(.2,.8,.3,1.4) infinite;
+
+  box-shadow:
+    0 0 18px rgba(255,230,0,0.9),
+    0 0 35px rgba(255,240,0,0.8);
+
+  border-radius:12px;
+}
+
+/* ========================================== */
+/* 💥 STRONG PULSE */
+/* ========================================== */
+
+@keyframes safePulse{
+
+  0%{
+    transform:scale(1);
+    box-shadow:
+      0 0 10px rgba(255,220,0,0.5);
+  }
+
+  40%{
+    transform:scale(1.22);   /* 🔥 BIGGER EXPAND */
+    box-shadow:
+      0 0 25px rgba(255,235,0,1),
+      0 0 55px rgba(255,255,0,0.9),
+      0 0 80px rgba(255,255,150,0.6);
+  }
+
+  60%{
+    transform:scale(1.12);   /* 👈 bounce back */
+  }
+
+  100%{
+    transform:scale(1);
+    box-shadow:
+      0 0 12px rgba(255,220,0,0.6);
+  }
+}
+
+/* ========================================== */
+/* 🔘 PICK BUTTON END */
+/* ========================================== */
+
+/* ===================== */
+/* 🪟 RESULT POPUP */
+/* ===================== */
+
+.result-popup{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:999;
+pointer-events:none;
+}
+
+.result-box{
+background:white;
+width:85%;
+max-width:600px;
+padding:80px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 25px 45px rgba(0,0,0,0.35);
+animation:popIn 0.3s ease;
+}
+
+.result-emoji{
+font-size:260px;
+transform:scale(1.80);
+animation:popIn 0.4s ease;
+}
+
+.result-emoji.winner{
+font-size:260px;
+animation:popBig 0.4s ease;
+}
+
+.result-text{
+font-size:48px;
+margin-top:20px;
+}
+
+@keyframes popIn{
+0%{transform:scale(0.6);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+@keyframes popBig{
+0%{transform:scale(0.6);}
+60%{transform:scale(1.3);}
+100%{transform:scale(1);}
+}
+
+/* ========================================== */
+/* 🏆 WINNER POPUP TEAM GLOW */
+/* ========================================== */
+
+.result-box.dog-win{
+  box-shadow:
+    0 0 25px #ff3b3b,
+    0 0 60px rgba(255,59,59,0.8),
+    0 0 100px rgba(255,59,59,0.6);
+  border:4px solid #ff3b3b;
+}
+
+.result-box.tiger-win{
+  box-shadow:
+    0 0 25px #2f80ff,
+    0 0 60px rgba(47,128,255,0.8),
+    0 0 100px rgba(47,128,255,0.6);
+  border:4px solid #2f80ff;
+}
+
+/* ========================================== */
+/* 💎 DIAMOND POPUP GLOW */
+/* ========================================== */
+
+.result-box.diamond-win{
+  border:4px solid gold;
+
+  box-shadow:
+    0 0 25px gold,
+    0 0 60px rgba(255,215,0,0.9),
+    0 0 100px rgba(255,235,100,0.6);
+}
+
+/* ===================== */
+/* 🎉 CONFETTI */
+/* ===================== */
+
+.confetti{
+position:fixed;
+top:-20px;
+z-index:9999;
+animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+0%{transform:translate(0,0);}
+100%{transform:translate(var(--drift,0),100vh);}
+}
+
+.confetti.burst{
+position:fixed;
+animation:burstMove ease-out forwards;
+}
+
+@keyframes burstMove{
+0%{transform:translate(0,0);}
+100%{transform:translate(var(--x),var(--y));}
+}
+
+/* ===================================================== */
+/* 🎮 GAME ENGINE END */
+/* ===================================================== */
+
+
+
+
+
+
+
+
+
+
+/* ===================================================== */
+/* 📱 RESPONSIVE */
+/* ===================================================== */
+
+@media (max-width:1000px){
+
+#game-container{
+flex-direction:column;
+align-items:center;
+}
+
+#left-panel,
+#right-panel{
+width:90%;
+}
+
+.letter-btn{
+width:100px;
+font-size:3rem;
+}
+
+}

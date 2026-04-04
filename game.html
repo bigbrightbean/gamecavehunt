@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- ===================================================== -->
+<!-- 🧠 HEAD START -->
+<!-- ===================================================== -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2 Sounds Blending Game: Cave Hunt</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- ===================================================== -->
+<!-- 🧠 HEAD END -->
+<!-- ===================================================== -->
+
+</head>
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- 🟩 HEADER START -->
+<!-- ===================================================== -->
+
+<header>
+
+  <h1>2 Sounds Blending Game: Cave Hunt</h1>
+
+  <div class="button-row">
+
+    <button id="shuffleBtn">Shuffle</button>
+    <button id="prevBtn">← Previous</button>
+    <button id="nextBtn">Next →</button>
+    <button id="menuBtn">Back to Main Menu</button>
+
+  </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- 🟩 HEADER END -->
+<!-- ===================================================== -->
+
+
+
+<!-- ===================================================== -->
+<!-- 🟦 MAIN LAYOUT START -->
+<!-- ===================================================== -->
+
+<div id="game-container">
+
+
+  <!-- ===================================================== -->
+  <!-- ⭐ PHONICS ENGINE START -->
+  <!-- ===================================================== -->
+
+  <div id="left-panel">
+
+    <!-- 🖼 IMAGE -->
+    <img id="image" src="zimages/zplaceholder.png" alt="word image">
+
+    <!-- 🔤 ROW 1 -->
+    <div class="letters-row spaced" id="row1"></div>
+
+    <!-- 🔤 ROW 2 -->
+    <div class="letters-row spaced" id="row2"></div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- ⭐ PHONICS ENGINE END -->
+  <!-- ===================================================== -->
+
+
+
+  <!-- ===================================================== -->
+  <!-- 🎮 GAME ENGINE START — CAVE HUNT -->
+  <!-- ===================================================== -->
+
+  <div id="right-panel">
+
+    <!-- 📝 INSTRUCTION -->
+    <div id="instructionText"></div>
+
+    <!-- 🧮 SCOREBOARD -->
+    <div class="scoreboard">
+
+      <!-- 🐶 DOG -->
+      <div id="dogTeam" class="team dog active">
+        <span class="team-emoji">🐶</span>
+        <div id="dogPoints" class="goal"></div>
+      </div>
+
+      <!-- 🐯 TIGER -->
+      <div id="tigerTeam" class="team tiger">
+        <span class="team-emoji">🐯</span>
+        <div id="tigerPoints" class="goal"></div>
+      </div>
+
+    </div>
+
+    <!-- 🌲 GAME AREA -->
+    <div id="game-area">
+      <div id="forestGrid"></div>
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- 🎮 GAME ENGINE END -->
+  <!-- ===================================================== -->
+
+
+</div>
+
+<!-- ===================================================== -->
+<!-- 🟦 MAIN LAYOUT END -->
+<!-- ===================================================== -->
+
+
+
+<!-- ===================================================== -->
+<!-- 📜 SCRIPT -->
+<!-- ===================================================== -->
+
+<script src="game.js"></script>
+
+<!-- ===================================================== -->
+<!-- 📜 SCRIPT END -->
+<!-- ===================================================== -->
+
+
+</body>
+</html>
